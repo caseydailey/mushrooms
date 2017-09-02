@@ -7,10 +7,10 @@
 <body ng-app="mushroomApp">
 
 <div>
-    <input type="text" placeholder="Search for..." ng-model="searchText">
+    <input type="text" placeholder="Search for..." ng-model="search">
         
-        <input type="radio" name="mushroom-type" value="falseedibility">Poisonous
-        <input type="radio" name="mushroom-type" value="trueedibility">Non-Poisonous
+        <input type="radio" name="mushroom-type" value="false" ng-model="edibility">Poisonous
+        <input type="radio" name="mushroom-type" value="true" ng-model="edibility">Non-Poisonous
         <input type="radio" name="mushroom-type" value="" ng-model="edibility">All
 
     <div ng-view></div>
