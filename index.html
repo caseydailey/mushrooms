@@ -4,12 +4,23 @@
     <meta charset="UTF-8">
     <title>Document</title>
 </head>
-<body>
+<body ng-app="mushroomApp">
 
+<div>
+    <input type="text" placeholder="Search for..." ng-model="searchText">
+        
+        <input type="radio" name="mushroom-type" value="falseedibility">Poisonous
+        <input type="radio" name="mushroom-type" value="trueedibility">Non-Poisonous
+        <input type="radio" name="mushroom-type" value="" ng-model="edibility">All
+
+    <div ng-view></div>
+</div>
 
 <script src="lib/node_modules/angular/angular.min.js"></script>    
-<script src="app/app.js"></script>    
-<script src="app/mushroomFactory.js"></script>    
-<script src="app/mushroomFactory.js"></script>    
+<script src="lib/node_modules/angular-route/angular-route.min.js"></script>    
+<script src="app/app.js"></script>
+<script src="app/fb-creds.js"></script>   
+<script src="app/mushroomFactory.js"></script>   
+<script src="app/mushroomController.js"></script>    
 </body>
 </html>
